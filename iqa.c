@@ -364,71 +364,17 @@ int main(int argc, char *argv[])
 
     //Botão resetar
     btn_resetar = gtk_button_new_with_mnemonic("_Reset");
-    g_object_set_data(G_OBJECT(btn_resetar), "entrada1", entrada1);
-    g_object_set_data(G_OBJECT(btn_resetar), "entrada2", entrada2);
-    g_object_set_data(G_OBJECT(btn_resetar), "entrada3", entrada3);
-    g_object_set_data(G_OBJECT(btn_resetar), "entrada4", entrada4);
-    g_object_set_data(G_OBJECT(btn_resetar), "entrada5", entrada5);
-    g_object_set_data(G_OBJECT(btn_resetar), "entrada6", entrada6);
-    g_object_set_data(G_OBJECT(btn_resetar), "entrada7", entrada7);
-    g_object_set_data(G_OBJECT(btn_resetar), "entrada8", entrada8);
-    g_object_set_data(G_OBJECT(btn_resetar), "entrada9", entrada9);
-    g_object_set_data(G_OBJECT(btn_resetar), "entryPeso1", entryPeso1);
-    g_object_set_data(G_OBJECT(btn_resetar), "entryPeso2", entryPeso2);
-    g_object_set_data(G_OBJECT(btn_resetar), "entryPeso3", entryPeso3);
-    g_object_set_data(G_OBJECT(btn_resetar), "entryPeso4", entryPeso4);
-    g_object_set_data(G_OBJECT(btn_resetar), "entryPeso5", entryPeso5);
-    g_object_set_data(G_OBJECT(btn_resetar), "entryPeso6", entryPeso6);
-    g_object_set_data(G_OBJECT(btn_resetar), "entryPeso7", entryPeso7);
-    g_object_set_data(G_OBJECT(btn_resetar), "entryPeso8", entryPeso8);
-    g_object_set_data(G_OBJECT(btn_resetar), "entryPeso9", entryPeso9);
-    g_signal_connect(GTK_BUTTON(btn_resetar), "clicked", G_CALLBACK(resetar), btn_resetar);
+    g_signal_connect(GTK_BUTTON(btn_resetar), "clicked", G_CALLBACK(resetar), button);
 
     //Botão salvar
     btn_salvar = gtk_button_new_with_mnemonic("_Salvar");
-    g_object_set_data(G_OBJECT(btn_salvar), "entrada1", entrada1);
-    g_object_set_data(G_OBJECT(btn_salvar), "entrada2", entrada2);
-    g_object_set_data(G_OBJECT(btn_salvar), "entrada3", entrada3);
-    g_object_set_data(G_OBJECT(btn_salvar), "entrada4", entrada4);
-    g_object_set_data(G_OBJECT(btn_salvar), "entrada5", entrada5);
-    g_object_set_data(G_OBJECT(btn_salvar), "entrada6", entrada6);
-    g_object_set_data(G_OBJECT(btn_salvar), "entrada7", entrada7);
-    g_object_set_data(G_OBJECT(btn_salvar), "entrada8", entrada8);
-    g_object_set_data(G_OBJECT(btn_salvar), "entrada9", entrada9);
-    g_object_set_data(G_OBJECT(btn_salvar), "entryPeso1", entryPeso1);
-    g_object_set_data(G_OBJECT(btn_salvar), "entryPeso2", entryPeso2);
-    g_object_set_data(G_OBJECT(btn_salvar), "entryPeso3", entryPeso3);
-    g_object_set_data(G_OBJECT(btn_salvar), "entryPeso4", entryPeso4);
-    g_object_set_data(G_OBJECT(btn_salvar), "entryPeso5", entryPeso5);
-    g_object_set_data(G_OBJECT(btn_salvar), "entryPeso6", entryPeso6);
-    g_object_set_data(G_OBJECT(btn_salvar), "entryPeso7", entryPeso7);
-    g_object_set_data(G_OBJECT(btn_salvar), "entryPeso8", entryPeso8);
-    g_object_set_data(G_OBJECT(btn_salvar), "entryPeso9", entryPeso9);
-    g_signal_connect(GTK_BUTTON(btn_salvar), "clicked", G_CALLBACK(saveData), btn_salvar);
+    g_signal_connect(GTK_BUTTON(btn_salvar), "clicked", G_CALLBACK(saveData), button);
     g_signal_connect(GTK_BUTTON(btn_salvar), "clicked", G_CALLBACK(exibir_dialogo), window);
 
 
     //Botão carregar
     btn_load = gtk_button_new_with_mnemonic("_Load");
-    g_object_set_data(G_OBJECT(btn_load), "entrada1", entrada1);
-    g_object_set_data(G_OBJECT(btn_load), "entrada2", entrada2);
-    g_object_set_data(G_OBJECT(btn_load), "entrada3", entrada3);
-    g_object_set_data(G_OBJECT(btn_load), "entrada4", entrada4);
-    g_object_set_data(G_OBJECT(btn_load), "entrada5", entrada5);
-    g_object_set_data(G_OBJECT(btn_load), "entrada6", entrada6);
-    g_object_set_data(G_OBJECT(btn_load), "entrada7", entrada7);
-    g_object_set_data(G_OBJECT(btn_load), "entrada8", entrada8);
-    g_object_set_data(G_OBJECT(btn_load), "entrada9", entrada9);
-    g_object_set_data(G_OBJECT(btn_load), "entryPeso1", entryPeso1);
-    g_object_set_data(G_OBJECT(btn_load), "entryPeso2", entryPeso2);
-    g_object_set_data(G_OBJECT(btn_load), "entryPeso3", entryPeso3);
-    g_object_set_data(G_OBJECT(btn_load), "entryPeso4", entryPeso4);
-    g_object_set_data(G_OBJECT(btn_load), "entryPeso5", entryPeso5);
-    g_object_set_data(G_OBJECT(btn_load), "entryPeso6", entryPeso6);
-    g_object_set_data(G_OBJECT(btn_load), "entryPeso7", entryPeso7);
-    g_object_set_data(G_OBJECT(btn_load), "entryPeso8", entryPeso8);
-    g_object_set_data(G_OBJECT(btn_load), "entryPeso9", entryPeso9);
-    g_signal_connect(GTK_BUTTON(btn_load), "clicked", G_CALLBACK(entry_load), btn_load);
+    g_signal_connect(GTK_BUTTON(btn_load), "clicked", G_CALLBACK(entry_load), button);
 
     grid = gtk_grid_new();
     gtk_grid_set_column_spacing(GTK_GRID(grid), 20);

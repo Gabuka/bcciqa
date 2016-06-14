@@ -188,17 +188,7 @@ double iqa(double q1, double q2, double q3, double q4, double q5, double q6, dou
 
  	iqa = (pow(q1,peso1) * pow(q2,peso2) * pow(q3,peso3) * pow(q4,peso4) * pow(q5,peso5) * pow(q6,peso6) * pow(q7,peso7) * pow(q8,peso8) * pow(q9,peso9));
  	printf("IQA: %.10lf\n",iqa);
-	/*
-	if(iqa <= 100 && iqa > 90)
- 		printf("Nível de Qualidade: Excelente\n");
- 	else if(iqa <= 90 && iqa > 70)
- 		printf("Nível de Qualidade: Bom\n");
- 	else if(iqa <= 70 && iqa > 50)
- 		printf("Nível de Qualidade: Médio\n");
- 	else if(iqa <= 50 && iqa > 25)
- 		printf("Nível de Qualidade: Ruim\n");
- 	else if(iqa <= 25 && iqa >= 0)
- 		printf("Nível de Qualidade: Muito Ruim\n");*/
+
 
  	return iqa;
 }
