@@ -16,4 +16,35 @@ Após este comando o compilador irá gerar um executável, para executá-lo bast
 
 ## Instalação do GTK no Windows 7
 
+Primeiramente crie uma pasta chamada Desenv no Disco local (:C) da sua máquina. Dentro deste, crie uma outra chamada dlls.
+
+### Configurações Iniciais
+Após feito esse processo, abra o Painel de Controle, clique em Sistema, depois em Configurações Avançadas do Sistema. Ao clicar, abrirá uma janela em que deve-se clicar em Variáveis de Ambiente. Na listagem de variáveis do ambiente, procure uma chamada "Path" e edite-a colocando ";C:\Desenv\dlls"(sem as aspas).
+
+Em seguida, faça download do MinGW, um compilador GNU para compilar o seu programa, baixe-o do site oficial http://www.mingw.org
+Coloque na sua pasta \Desenv que foi criada anteriormente, execute-o e certifique-se que  as opções MinGW base tools, g++ compiler e MinGW Make estejam marcadas e aplique as atualizações.
+
+Para facilitar o processo de codagem, baixe o Code::Blocks, uma plataforma para compilações open source. Fala download dos 3 arquivos presentes neste site http://forums.codeblocks.org/index.php/topic,21228.0.html e também os coloque na pasta Desenv. Os arquivos virão compactados, caso não tenha o WinRar, faça download da sua última versão no site oficial http://www.win-rar.com/download.html?&L=0
+
+Para utilizar o GTK, faça download deste também na pasta Desenv, pelo site https://sourceforge.net/projects/gladewin32/files/gtk%2B-win32-devel/2.10.11/gtk-dev-2.10.11-win32-1.exe/download?use_mirror=pilotfiber&download=&failedmirror=ufpr.dl.sourceforge.net
+No processo de instalação do GTK ao escolher a pasta de instalação insira a pasta de densenvovimento (No nosso caso C:\Desenv\GTK). E bom seguir esse metodo para que fique tudo organizado.
+
+### Configurações Code::Blocks
+Abra o Code::Blocks e siga os passos dados a seguir.
+1. Crie um novo projeto: File->New->Project…
+2. Escolhendo o wizard “GTK+ project”
+3. Continue o procedimento
+4. Insira as informações do seu projeto e escolha a pasta para adicionar-lo (No nosso caso C:\Desenv\Projetos\).
+5. Será pedido o caminho onde o GTK foi instalado, prescione “Next”, pois será na proxima tela a configuração necessária.
+6. Na tela adicione os seguintes caminhos e flags.
+
+base – C:\Desenv\GTK
+include – C:\Desenv\GTK\include
+lib – C:\Desenv\GTK\lib
+obj – C:\Desenv\GTK\bin
+cflags – pkg-config –cflags gtk+-2.0
+lflags – pkg-config –libs gtk+-2.0
+
+7. Finalize a configuração e pronto. OBS: A configuração de caminho e flags só será necessário efetuar um vez.
+8. Prescione F9 para compilar o projeto criado e pronto.
 
