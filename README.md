@@ -24,7 +24,7 @@ Após feito esse processo, abra o Painel de Controle, clique em Sistema, depois 
 Em seguida, faça download do MinGW, um compilador GNU para compilar o seu programa, baixe-o do site oficial http://www.mingw.org
 Coloque na sua pasta \Desenv que foi criada anteriormente, execute-o e certifique-se que  as opções MinGW base tools, g++ compiler e MinGW Make estejam marcadas e aplique as atualizações.
 
-Para facilitar o processo de codagem, baixe o Code::Blocks, uma plataforma para compilações open source. Fala download dos 3 arquivos presentes neste site http://forums.codeblocks.org/index.php/topic,21228.0.html e também os coloque na pasta Desenv. Os arquivos virão compactados, caso não tenha o WinRar, faça download da sua última versão no site oficial http://www.win-rar.com/download.html?&L=0
+Para facilitar o processo de codagem, baixe o Code::Blocks, uma plataforma para compilações open source. Faça download dos 3 arquivos presentes neste site http://forums.codeblocks.org/index.php/topic,21228.0.html e também os coloque na pasta Desenv. Os arquivos virão compactados, caso não tenha o WinRar, faça download da sua última versão no site oficial http://www.win-rar.com/download.html?&L=0
 
 Para utilizar o GTK, faça download deste também na pasta Desenv, pelo site https://sourceforge.net/projects/gladewin32/files/gtk%2B-win32-devel/2.10.11/gtk-dev-2.10.11-win32-1.exe/download?use_mirror=pilotfiber&download=&failedmirror=ufpr.dl.sourceforge.net
 No processo de instalação do GTK ao escolher a pasta de instalação insira a pasta de densenvovimento (No nosso caso C:\Desenv\GTK). E bom seguir esse metodo para que fique tudo organizado.
